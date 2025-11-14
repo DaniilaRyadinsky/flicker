@@ -1,0 +1,27 @@
+.layout__content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layout__sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+}
+
+.layout__outlet {
+    flex: 1;
+    margin-left: 72px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    transition: margin-left 0.3s;
+}
+
+.layout__outlet_sidebar_visible {
+    margin-left: 440px;
+}
