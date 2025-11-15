@@ -29,14 +29,14 @@ export const Sidebar = () => {
       <div className={styles.left_container}>
         <div className={styles.sidebar_list}>
           <SidebarItem
-            label='Заметки'
+            label='Главная'
             isActive={mode === SideBarModes.Main}
             onClick={() => setMode(SideBarModes.Main)}
           >
             <img className={styles.sidebar_item_icon_image} src={mainIcon} alt="main" />
           </SidebarItem>
           <SidebarItem
-            label='Теги'
+            label='Чаты'
             isActive={mode === SideBarModes.Chat}
             onClick={() => setMode(SideBarModes.Chat)}
           >
