@@ -1,4 +1,5 @@
 .panel_container {
+    box-sizing: border-box;
     height: calc(100% - 20px);
     width: 100%;
     display: flex;
@@ -17,3 +18,164 @@
     font-weight: normal;
     padding-left: 20px;
 }
+
+.subject_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.subject_item {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    user-select: none;
+}
+
+.subject_item:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    transform: translateX(4px);
+}
+
+.subject_item:active {
+    transform: translateX(2px);
+}
+
+.add_subject_button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    user-select: none;
+    text-align: center;
+    font-weight: 500;
+    border: 1px dashed var(--md-sys-color-primary);
+}
+
+.add_subject_button:hover {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    transform: translateX(4px);
+}
+
+.add_subject_button:active {
+    transform: translateX(2px);
+}
+
+.add_subject_form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--md-sys-color-surface-variant);
+}
+
+.add_subject_input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 6px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-size: 0.875rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.add_subject_input:focus {
+    outline: none;
+    border-color: var(--md-sys-color-primary);
+    box-shadow: 0 0 0 2px var(--md-sys-color-primary-container);
+}
+
+.add_subject_input::placeholder {
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 0.6;
+}
+
+.add_subject_actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.add_subject_save,
+.add_subject_cancel {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.add_subject_save {
+    color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
+}
+
+.add_subject_save:hover:not(:disabled) {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.add_subject_save:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.add_subject_cancel {
+    color: var(--md-sys-color-on-surface-variant);
+    background-color: transparent;
+}
+
+.add_subject_cancel:hover {
+    background-color: var(--md-sys-color-surface-variant);
+}
+
+.upload_file_button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    user-select: none;
+    text-align: center;
+    font-weight: 500;
+    border: 1px dashed var(--md-sys-color-tertiary);
+}
+
+.upload_file_button:hover {
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    transform: translateX(4px);
+}
+
+.upload_file_button:active {
+    transform: translateX(2px);
+}
+
+.upload_file_form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    /* background-color: var(--md-sys-color-surface-variant); */
+}
+

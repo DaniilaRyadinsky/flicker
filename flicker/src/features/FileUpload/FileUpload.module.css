@@ -4,7 +4,7 @@
 }
 
 .upload_label {
-    background-color: var(--on-main-container);
+    background-color: #ABABAB;
     padding: 10px 40px;
     border-radius: 4px;
     display: flex;
@@ -21,4 +21,11 @@
 .err {
     color: var(--red);
     font-size: .825rem;
+}
+
+.file_name {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: var(--md-sys-color-on-surface-variant);
+    word-break: break-all;
 }

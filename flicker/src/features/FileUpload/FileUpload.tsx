@@ -14,11 +14,13 @@ const FileUpload = ({ onUpload }: IFileUpload) => {
     const id = useId()
     const [isLoading, setIsLoading] = useState(false)
     const [err, setErr] = useState('')
+    const [fileName, setFileName] = useState<string>('')
 
     const handleUploadImage = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0]
 
         if (file) {
+            setFileName(file.name)
             onUpload(file)
 
             // if (file.size > 10 * 1024 * 1024) {
@@ -55,6 +57,7 @@ const FileUpload = ({ onUpload }: IFileUpload) => {
                     accept=""
                     onChange={handleUploadImage} />
             </label>
+            {fileName && <p className={styles.file_name}>{fileName}</p>}
             {err != '' && <p className={styles.err}>{err}</p>}
         </div>
     )

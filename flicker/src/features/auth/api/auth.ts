@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../../shared/consts/index'
+  import { API_BASE_URL } from '../../../shared/consts'
 
 interface AuthParams {
   username: string;
@@ -10,7 +10,7 @@ interface AuthParams {
 
 
 async function fetchLogin({ username, password, onSuccess, onError }: AuthParams) {
-  fetch(`${BASE_URL}api/auth`, {
+  fetch(`${API_BASE_URL}api/auth`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -30,7 +30,7 @@ async function fetchLogin({ username, password, onSuccess, onError }: AuthParams
 }
 
 async function fetchReg({ username, password, onSuccess, onError }: AuthParams) {
-  fetch(`${BASE_URL}register`, {
+  fetch(`${API_BASE_URL}register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -38,10 +38,10 @@ async function fetchReg({ username, password, onSuccess, onError }: AuthParams) 
     const result = await response.json();
     if (response.ok) {
       localStorage.setItem('access_token', result.access_token);
-      onSuccess
+      onSuccess();
     } else {
       console.log(result.error)
-      onError
+      onError();
     }
   })
 }

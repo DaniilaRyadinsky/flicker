@@ -2,23 +2,20 @@
     display: flex;
     flex-direction: row;
     /* gap: 10px; */
-    width: 72px;
+    /* width: 72px; */
     transition: width 0.3s;
 }
 
 .sidebar_visible {
-    width: 440px;
+    /* width: 440px; */
 }
 
 .left_container {
-    width: 72px;
-    height: 100vh;
+    /* width: 72px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    padding-top: 16px;
-    overflow-y: auto;
 }
 
 .sidebar_list {
@@ -28,15 +25,22 @@
     gap: 12px;
 }
 
+.sidebar_item_icon_image {
+    width: 25px;
+    height: 25px;
+}
+
 .sidebar_panel {
-    height: 100vh;
+    position: fixed;
+    height: calc(100vh - 56px);
+    width: 368px;
     padding-right: 26px;
-    overflow-y: auto;
-    /* position: absolute; */
     left: -500px;
-    transition: left 0.3;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 10;
 }
 
 .sidebar_panel_visible {
-    left: 72px;
+    left: 85px;
 }
