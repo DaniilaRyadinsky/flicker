@@ -38,8 +38,6 @@ function MainPage() {
               file,
               (data) => {
                 console.log('Файл загружен:', data)
-                
-                
                   setText(data)
                   console.log(text)
                 
